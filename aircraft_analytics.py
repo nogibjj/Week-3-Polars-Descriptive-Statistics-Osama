@@ -6,7 +6,7 @@
 # In this exercise, we will extract and analyze aircraft wildlife strikes data
 # and we will determine the probability of each part of an aircraft getting damaged by an aircraft wildlife strike
 import io
-import pandas as pd
+import polars as pl
 import matplotlib.pyplot as plt
 import requests
 
@@ -20,11 +20,12 @@ def AircraftAnalytics():
     # Download the contents of the CSV file
     download = requests.get(url, timeout = 1000).content
     # Read the CSV file into a Pandas DataFrame
-    df = pd.read_csv(io.StringIO(download.decode("utf-8")), low_memory=False)
+    df = pl.read_csv(io.StringIO(download.decode("utf-8")), low_memory=False, infer_schema_length=10000)
     # Explore the data
-    df.head()
-    df.info()
-    df.describe()
+    print(df.head())
+    #df.info()
+    print(df.describe())
+    print(df.mean())
     # # Now we are going to calculate the probability of each part of the flight getting damaged and plot these probabilities
     strikes = {}
     for c in df.columns:
