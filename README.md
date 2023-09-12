@@ -45,7 +45,7 @@ Things included are:
 # Descriptive Statistics in Polars
 ## Below are the commands executed, the analytics obtained, and the visualizations generated:
 
-# polars Descriptive Statistics Assignment
+# Polars Descriptive Statistics Assignment
 ## Aircraft wildlife strikes data | 1990 - 2015
 
 In this exercise, we will extract and analyze aircraft wildlife strikes data, and we will determine the probability of each part of an aircraft getting damaged by an aircraft wildlife strike
