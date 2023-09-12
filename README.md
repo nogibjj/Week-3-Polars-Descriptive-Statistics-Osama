@@ -45,44 +45,6 @@ Things included are:
 # Descriptive Statistics in Polars
 ## Below are the commands executed, the analytics obtained, and the visualizations generated:
 
-# Polars Descriptive Statistics Assignment
-## Aircraft wildlife strikes data | 1990 - 2015
-
-In this exercise, we will extract and analyze aircraft wildlife strikes data, and we will determine the probability of each part of an aircraft getting damaged by an aircraft wildlife strike
-
-
-```python
-# Import the necessary libraries
-
-import polars as pl
-import matplotlib.pyplot as plt
-import requests
-import io
-```
-
-
-```python
-# Read our data from Google Drive
-
-file_id = "1TAD7Uyc9PjByt_q13uvGXGeubXnujnUi"
-url = f"https://drive.google.com/uc?id={file_id}"
-
-# Download the contents of the CSV file
-download = requests.get(url).content
-
-# Read the CSV file into a polars DataFrame
-df = pl.read_csv(io.StringIO(download.decode("utf-8")), low_memory=False, infer_schema_length=10000)
-```
-
-
-```python
-# Explore the data
-
-df.head()
-```
-
-
-
 
 # Polars Descriptive Statistics Assignment
 ## Aircraft wildlife strikes data | 1990 - 2015
