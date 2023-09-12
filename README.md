@@ -1,7 +1,7 @@
 [![CI](https://github.com/nogibjj/mlops-template/actions/workflows/cicd.yml/badge.svg?branch=GPU)](https://github.com/nogibjj/mlops-template/actions/workflows/cicd.yml)
 [![Codespaces Prebuilds](https://github.com/nogibjj/mlops-template/actions/workflows/codespaces/create_codespaces_prebuilds/badge.svg?branch=GPU)](https://github.com/nogibjj/mlops-template/actions/workflows/codespaces/create_codespaces_prebuilds)
 
-# Week 2: polars Descriptive Statistics Project
+# Week 2: Polars Descriptive Statistics Project
 ## This project builds upon the previous mini project to run some descriptive analytics and present the results using polars and MatplotLib
 
 
@@ -42,7 +42,7 @@ Things included are:
 * `githubactions`
 
 
-# Descriptive Statistics in polars
+# Descriptive Statistics in Polars
 ## Below are the commands executed, the analytics obtained, and the visualizations generated:
 
 # polars Descriptive Statistics Assignment
@@ -71,7 +71,7 @@ url = f"https://drive.google.com/uc?id={file_id}"
 download = requests.get(url).content
 
 # Read the CSV file into a polars DataFrame
-df = pd.read_csv(io.StringIO(download.decode("utf-8")), low_memory=False)
+df = pd.read_csv(io.StringIO(download.decode("utf-8")), low_memory=False, infer_schema_length=10000)
 ```
 
 
