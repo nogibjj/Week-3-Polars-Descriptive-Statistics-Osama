@@ -1,8 +1,8 @@
 [![CI](https://github.com/nogibjj/mlops-template/actions/workflows/cicd.yml/badge.svg?branch=GPU)](https://github.com/nogibjj/mlops-template/actions/workflows/cicd.yml)
 [![Codespaces Prebuilds](https://github.com/nogibjj/mlops-template/actions/workflows/codespaces/create_codespaces_prebuilds/badge.svg?branch=GPU)](https://github.com/nogibjj/mlops-template/actions/workflows/codespaces/create_codespaces_prebuilds)
 
-# Week 2: Polars Descriptive Statistics Project
-## This project builds upon the previous mini project to run some descriptive analytics and present the results using Polars and MatplotLib
+# Week 2: polars Descriptive Statistics Project
+## This project builds upon the previous mini project to run some descriptive analytics and present the results using polars and MatplotLib
 
 
 ## This repo includes the :
@@ -27,7 +27,7 @@ Things included are:
 
 * `Pytest`
 
-* `Polars`
+* `polars`
 
 * `Pylint`
 
@@ -42,10 +42,10 @@ Things included are:
 * `githubactions`
 
 
-# Descriptive Statistics in Polars
+# Descriptive Statistics in polars
 ## Below are the commands executed, the analytics obtained, and the visualizations generated:
 
-# Polars Descriptive Statistics Assignment
+# polars Descriptive Statistics Assignment
 ## Aircraft wildlife strikes data | 1990 - 2015
 
 In this exercise, we will extract and analyze aircraft wildlife strikes data, and we will determine the probability of each part of an aircraft getting damaged by an aircraft wildlife strike
@@ -54,7 +54,7 @@ In this exercise, we will extract and analyze aircraft wildlife strikes data, an
 ```python
 # Import the necessary libraries
 
-import Polars as pd
+import polars as pd
 import matplotlib.pyplot as plt
 import requests
 import io
@@ -70,7 +70,7 @@ url = f"https://drive.google.com/uc?id={file_id}"
 # Download the contents of the CSV file
 download = requests.get(url).content
 
-# Read the CSV file into a Polars DataFrame
+# Read the CSV file into a polars DataFrame
 df = pd.read_csv(io.StringIO(download.decode("utf-8")), low_memory=False)
 ```
 
@@ -246,7 +246,7 @@ df.head()
 df.info()
 ```
 
-    <class 'Polars.core.frame.DataFrame'>
+    <class 'polars.core.frame.DataFrame'>
     RangeIndex: 174104 entries, 0 to 174103
     Data columns (total 66 columns):
      #   Column                Non-Null Count   Dtype  
