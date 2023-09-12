@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Module including AircraftAnalytics function"""
-# # Pandas Descriptive Statistics Assignment
+# # Polars Descriptive Statistics Assignment
 # ## Aircraft wildlife strikes data | 1990 - 2015
 
 # In this exercise, we will extract and analyze aircraft wildlife strikes data
@@ -19,7 +19,7 @@ def AircraftAnalytics():
     url = f"https://drive.google.com/uc?id={file_id}"
     # Download the contents of the CSV file
     download = requests.get(url, timeout = 1000).content
-    # Read the CSV file into a Pandas DataFrame
+    # Read the CSV file into a Polars DataFrame
     df = pl.read_csv(io.StringIO(download.decode("utf-8")), low_memory=False, infer_schema_length=10000)
     # Explore the data
     print(df.head())
