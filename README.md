@@ -54,7 +54,7 @@ In this exercise, we will extract and analyze aircraft wildlife strikes data, an
 ```python
 # Import the necessary libraries
 
-import polars as pd
+import polars as pl
 import matplotlib.pyplot as plt
 import requests
 import io
@@ -71,7 +71,7 @@ url = f"https://drive.google.com/uc?id={file_id}"
 download = requests.get(url).content
 
 # Read the CSV file into a polars DataFrame
-df = pd.read_csv(io.StringIO(download.decode("utf-8")), low_memory=False, infer_schema_length=10000)
+df = pl.read_csv(io.StringIO(download.decode("utf-8")), low_memory=False, infer_schema_length=10000)
 ```
 
 
