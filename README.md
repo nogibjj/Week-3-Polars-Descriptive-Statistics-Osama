@@ -1,5 +1,4 @@
-[![CI](https://github.com/nogibjj/mlops-template/actions/workflows/cicd.yml/badge.svg?branch=GPU)](https://github.com/nogibjj/mlops-template/actions/workflows/cicd.yml)
-[![Codespaces Prebuilds](https://github.com/nogibjj/mlops-template/actions/workflows/codespaces/create_codespaces_prebuilds/badge.svg?branch=GPU)](https://github.com/nogibjj/mlops-template/actions/workflows/codespaces/create_codespaces_prebuilds)
+[![CI](https://github.com/nogibjj/Week-3-Polars-Descriptive-Statistics-Osama/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/Week-3-Polars-Descriptive-Statistics-Osama/actions/workflows/cicd.yml)
 
 # Week 3: Polars Descriptive Statistics Project
 ## This project builds upon the previous project to run some descriptive analytics and present the results using polars and MatplotLib
